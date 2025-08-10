@@ -117,6 +117,98 @@
 
 
     #endregion
+
+    #region V05
+
+    #region Encapsulation
+
+    internal struct Employee
+    {
+        #region Attributes
+        //public int Id;
+        //public string Name;
+
+        private int Id;
+        private string Name;
+        #endregion
+
+        #region Encapsulation
+
+        #region Getter And Setter
+
+        public string GetName()
+        {
+            return Name;
+        }
+
+        public void SetName(string Value)
+        {
+            Name = Value;
+        }
+
+        #endregion
+
+        #region Property
+        //مميزاتها
+        // 1. بقدر اغير الاسم هنا من غير ما العالم الخارجي يتاثر بالتغيير
+        // 2. بقدر اخلي الجيت لوحده او الست لوحده مش محتاج يبقوا الاتنين متفعلين عادي
+        // 3. بقدر احط شرط عادي 
+        // مثال
+        // set { Empsalary = value > 5000 ? 5000 : value ; }
+        private decimal Empsalary;
+
+        public decimal Salary // FullProperty
+        {
+            get { return Empsalary; }
+            set { Empsalary = value; }
+        }
+
+        public int Age { get; set; } // Automatic Property و دا مش محتاج تعمل انت اتربيوت عشان هو بيعملها اوتو 
+
+
+        //private decimal Deduction;
+        public decimal EmpDeduction // Read Only Property  
+        {
+            //get { return Deduction; }
+            //set { Deduction = value; }
+
+            get { return Salary * 0.1M; } // حطينا ام عشان هنا الارقام ديسيمال و الارقام في الطبيعي دبل
+        }
+        #endregion
+
+        #endregion
+
+        #region Constructors
+        public Employee(int id, string name)
+        {
+            Id = id;
+            Name = name;
+        }
+
+        public Employee(int id, string name, decimal empsalary)
+        {
+            Id = id;
+            Name = name;
+            Salary = empsalary;
+        }
+
+        #endregion
+
+        #region Method
+        public override string ToString()
+        {
+            return $"Id : {Id} , Name : {Name}";
+        }
+        #endregion
+
+
+
+
+    }
+
+    #endregion
+
+    #endregion
     internal class Program
     {
         static void Main(string[] args)
@@ -212,6 +304,27 @@
 
             #endregion
 
+            #region V05
+
+            #region Encapsulation
+
+            //Employee emp = new Employee(10,"Ahmed");
+
+            ////emp.Id = 20; // Set Id Direct By Att
+            ////Console.WriteLine(emp.Id); // Get Id Direct By Att
+
+            ////emp.SetName("Mohamed");
+            ////Console.WriteLine(emp.GetName());
+
+            //emp.Salary = 5000;
+            //Console.WriteLine(emp.Salary);
+
+            ////emp.Age = 10;
+            ////Console.WriteLine(emp.Age);
+            //Console.WriteLine(emp.EmpDeduction);
+            #endregion
+
+            #endregion
         }
     }
 }

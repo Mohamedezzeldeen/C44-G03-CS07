@@ -32,6 +32,25 @@
 
     #endregion
 
+    #region Q03
+    //public struct Person
+    //{
+    //    public string Name { get; set; }
+    //    public int Age { get; set; }
+
+    //    public Person(string _Name, int _Age)
+    //    {
+    //        _Name = Name;
+    //        _Age = Age;
+    //    }
+
+    //    public override string ToString()
+    //    {
+    //        return $"Name = {Name} , Age = {Age}";
+    //    }
+    //}
+    #endregion
+
     internal class Program
     {
         static void Main(string[] args)
@@ -85,6 +104,37 @@
             //Console.WriteLine($"First Point : {p[0]}");
             //Console.WriteLine($"Second Point : {p[1]}");
             //Console.WriteLine($"The Distance Is {distance}");
+            #endregion
+
+            #region Q3.Create a struct called "Person" with properties "Name" and "Age". Write a C# program that takes details of 3 persons as input from the user and displays the name and age of the oldest person.
+            //Person[] persons = new Person[3];
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    string name;
+            //    do
+            //    {
+            //        Console.Write($"Please Enter The Name Of Person number {i + 1} : ");
+            //        name = Console.ReadLine();
+            //    } while (string.IsNullOrWhiteSpace(name));
+            //    persons[i].Name = name;
+            //    int age;
+            //    bool flage;
+            //    do
+            //    {
+            //        Console.Write($"Please Enter The Age Of Person number {i + 1} : ");
+            //        flage = int.TryParse(Console.ReadLine(), out age);
+            //    } while (!flage);
+            //    persons[i].Age = age;
+            //}
+
+            //Person theBiggestPerson = persons[0];
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    if (theBiggestPerson.Age < persons[i].Age)
+            //        theBiggestPerson = persons[i];
+            //}
+            //Console.Clear();
+            //Console.WriteLine(theBiggestPerson);
             #endregion
         }
     }

@@ -209,6 +209,121 @@
     #endregion
 
     #endregion
+
+    #region V06
+    internal struct PhoneNoteBook
+    {
+        #region Attributs
+        private string[]? names;
+        private int[] numbers;
+        private int size;
+        #endregion
+
+        public int Size { get { return size; } }
+
+        #region Constructors
+        public PhoneNoteBook(int Size)
+        {
+            size = Size;
+            names = new string[Size];
+            numbers = new int[Size];
+        }
+        #endregion
+
+        #region Method
+        public void AddPerson(int Postion, string Name, int Numbers)
+        {
+            if (names is not null && numbers is not null)
+            {
+                if (Postion < size && Postion >= 0)
+                {
+                    names[Postion] = Name;
+                    numbers[Postion] = Numbers;
+                }
+            }
+
+        }
+        #endregion
+
+        #region Getter And Setter
+
+        public int GetNumber(string Name)
+        {
+            if (names is not null)
+            {
+                for (int i = 0; i < names?.Length; i++)
+                {
+                    if (names[i] == Name)
+                    {
+                        return numbers[i];
+                    }
+                }
+            }
+            return -1;
+        }
+
+        public void SetNumber(string Name, int NameNumber)
+        {
+            if (names is not null)
+            {
+                for (int i = 0; i < names?.Length; i++)
+                {
+                    if (names[i] == Name)
+                    {
+                        numbers[i] = NameNumber;
+                        //break; 
+                        //or
+                        return;
+                    }
+                }
+            }
+        }
+
+        #endregion
+
+        #region Indxer
+        public int this[string Name]
+        {
+            get
+            {
+                if (names is not null)
+                {
+                    for (int i = 0; i < names?.Length; i++)
+                    {
+                        if (names[i] == Name)
+                        {
+                            return numbers[i];
+                        }
+                    }
+                }
+                return -1;
+            }
+            set
+            {
+                if (names is not null)
+                {
+                    for (int i = 0; i < names?.Length; i++)
+                    {
+                        if (names[i] == Name)
+                        {
+                            numbers[i] = value;
+                            //break; 
+                            //or
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+
+        public string this[int index]
+        {
+            get { return $"Person {index} , Name : {names[index]} , Numbers : {numbers[index]}"; }
+        }
+        #endregion
+
+    }
+    #endregion
     internal class Program
     {
         static void Main(string[] args)
@@ -322,6 +437,34 @@
             ////emp.Age = 10;
             ////Console.WriteLine(emp.Age);
             //Console.WriteLine(emp.EmpDeduction);
+            #endregion
+
+            #endregion
+
+            #region V06
+
+            #region Indexer
+            //PhoneNoteBook phoneNoteBook = new PhoneNoteBook(3);
+
+            //phoneNoteBook.AddPerson(0, "Ahmed", 123);
+            //phoneNoteBook.AddPerson(1, "May", 456);
+            //phoneNoteBook.AddPerson(2, "Mona", 789);
+
+            ////Console.WriteLine(phoneNoteBook.GetNumber("May"));
+            ////phoneNoteBook.SetNumber("May", 555);
+            ////Console.WriteLine(phoneNoteBook.GetNumber("May"));
+
+            ////phoneNoteBook["Ahmed"] = 555;
+            ////Console.WriteLine(phoneNoteBook["Ahmed"]);
+
+            ////for (int i = 0; i < phoneNoteBook.Size; i++)
+            ////{
+            ////Console.WriteLine(phoneNoteBook[i]);
+            ////}
+
+            //string Name = "Ahmed";
+            //Console.WriteLine(Name[0]);
+
             #endregion
 
             #endregion

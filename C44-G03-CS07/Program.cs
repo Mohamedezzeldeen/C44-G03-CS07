@@ -51,6 +51,68 @@
     //}
     #endregion
 
+    #region Q04
+    //public struct Rectangle
+    //{  private double W;
+    //   private double H;
+
+    //    public Rectangle( double _W , double _H)
+    //    {
+    //        Width = _W;
+    //        Height = _H;
+    //    }
+
+    //    public double Width 
+    //    {
+    //        get { return W; } 
+    //        set
+    //        {
+    //            if (value > 0)
+    //            {
+    //                W = value;
+    //            }
+    //            else 
+    //            {
+    //                Console.WriteLine("Error");
+    //            }
+    //        }
+    //    }
+
+
+    //    public double Height
+    //    {
+    //        get { return H; }
+    //        set
+    //        {
+    //            if (value > 0)
+    //            {
+    //                H = value;
+    //            }
+    //            else
+    //            {
+    //                Console.WriteLine("Error");
+    //            }
+    //        }
+    //    }
+
+    //    public double Area
+    //    {
+    //        get { return W * H; }
+    //    }
+
+    //    public void DisplayInfo()
+    //    {
+    //        Console.WriteLine($"Width: {Width}, Height: {Height}, Area: {Area}");
+    //    }
+
+
+    //    public override string ToString()
+    //    {
+    //        return $"(Width : {Width} , Height : {Height})";
+    //    }
+    //}
+    #endregion
+
     internal class Program
     {
         static void Main(string[] args)
@@ -135,6 +197,19 @@
             //}
             //Console.Clear();
             //Console.WriteLine(theBiggestPerson);
+            #endregion
+
+            #region Q4.Create a struct named Rectangle that represents a rectangle with the following fields: width (type: double) , height (type: double)
+
+            //Console.Write("Enter Width: ");
+            //double w = double.Parse(Console.ReadLine());
+
+            //Console.Write("Enter Height: ");
+            //double h = double.Parse(Console.ReadLine());
+
+            //Rectangle rect = new Rectangle(w, h);
+            //rect.DisplayInfo();
+
             #endregion
         }
     }

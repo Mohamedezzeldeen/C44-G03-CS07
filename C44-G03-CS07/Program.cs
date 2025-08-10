@@ -23,6 +23,46 @@
 
 
     #endregion
+
+    #region V02
+
+    //internal struct Point
+    //{
+    //    #region Attributes
+
+    //    public int X;
+
+    //    public int Y;
+
+    //    #endregion
+
+    //    #region Constructors
+    //    // It Is Special Function
+    //    // 1. Becouse Name As Struct Name
+    //    // 2. Has No Return Type
+
+    //    // He Build This Function By him Self
+    //    public Point()
+    //    {
+    //        X = default;
+    //        Y = default;
+    //    }
+
+    //    public Point(int _x, int _y)
+    //    {
+    //        X = _x;
+    //        Y = _y;
+    //    }
+
+    //    public Point(int Number)
+    //    {
+    //        X = Y = Number;
+    //    }
+    //    #endregion
+
+    //}
+
+    #endregion
     internal class Program
     {
         static void Main(string[] args)
@@ -63,6 +103,24 @@
             ////or
             //user01.Permisions |= Permisions.Delete;
             //Console.WriteLine(user01.Permisions);
+            #endregion
+
+            #endregion
+
+            #region V02
+
+            #region Struct
+
+            #region Example 01
+            //Point P01; // كدا خزنت 8 ابيت في الستاك
+
+            //P01 = new Point(10); // في الكلاس New  في الاستراكت غير ال New  معلومة ال
+            //// New Is Just For Constructor Selection That Will Used To Inialize P01 Attribute
+
+            //Console.WriteLine(P01.X);
+            //Console.WriteLine(P01.Y); 
+            #endregion
+
             #endregion
 
             #endregion
